@@ -30,16 +30,16 @@ if (!empty($_SESSION["usuarioid"])) {
             <?php include_once '../comps/navcomp.php'; ?>
         </div>
         <div class="container" >
-
-            <?php
-           
-            getindex();
-            ?>
-
+            <center>
+                <?php
+                getindex();
+                ?>
+            </center>
         </div>
 
 
-<?php include '../comps/compsjs.php'; ?>
+        <?php include '../comps/compsjs.php'; ?>
+        <script src="../comps/js/index.js" ></script>
 
     </body>
 </html>
