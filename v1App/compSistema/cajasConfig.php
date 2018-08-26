@@ -3,7 +3,7 @@
 
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
 
-
+unset($_SESSION["agruv"]);
     $cid = $_POST['caid'];
     $cnb = $_POST['canb'];
     $clo = $_POST['calo'];

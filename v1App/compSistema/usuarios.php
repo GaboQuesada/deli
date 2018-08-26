@@ -2,10 +2,11 @@
 @session_start();
 
 $_SESSION["Agregar a Planilla"] = 1;
+
 $_SESSION["agru"] = 1;
 
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
-    
+    unset($_SESSION["agruv"]);
 } else {
     header("Location: ../comps/nomodule.php");
 }
@@ -22,7 +23,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <?php include '../comps/compscss.php'; ?>
         <link rel="stylesheet" href="css/usuarios.css" >
 
- 
+
 
 
         <title>Localidades</title>
@@ -32,8 +33,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <input type="hidden" id="tocompare">
         <?php include '../comps/ShowInfo.php'; ?>
         <?php include '../comps/navsuperior.php'; ?>
-        
-        
+
+
         <div>
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>

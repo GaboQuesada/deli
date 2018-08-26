@@ -4,6 +4,7 @@ session_start();
 if (!empty($_SESSION["usuarioid"])) {
     $_SESSION["modu"] = "Planilla";
     include '../comps/getIndex.php';
+    unset($_SESSION["agru"]);
 } else {
     header("Location: ../index.php");
 }

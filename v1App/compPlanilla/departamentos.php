@@ -2,7 +2,8 @@
 @session_start();
 
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
-    
+   unset($_SESSION["agru"]); 
+   unset($_SESSION["agruv"]);
 } else {
     header("Location: ../comps/nomodule.php");
 }

@@ -4,7 +4,7 @@
 
 
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
-
+unset($_SESSION["agruv"]);
 
     $id = $_POST['iduss'];
     $op = $_POST['nbuss'];

@@ -2,7 +2,7 @@
 @session_start();
 
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
-    
+    unset($_SESSION["agruv"]);
 } else {
     header("Location: ../comps/nomodule.php");
 }

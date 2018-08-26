@@ -12,9 +12,11 @@ if (!empty($_SESSION["usuarioid"])) {
 }
 ?>
 
-
-
-<div class=" boxcontent" style="z-index: 4500">
+<?php
+        if (isset($_SESSION["agruv"])) {
+        
+        } else { ?>
+          <div class=" boxcontent" style="z-index: 4500">
     <nav class="nav flex-lg-column contenedor" style="z-index: 4500" >
         <?php
         try {
@@ -44,3 +46,5 @@ if (!empty($_SESSION["usuarioid"])) {
             ?>
     </nav>
 </div>
+     <?php   }
+        ?>
