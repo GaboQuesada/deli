@@ -29,14 +29,12 @@ if (!empty($_SESSION["usuarioid"])) {
         <div class="container" style="padding-top:25px; padding-bottom: 25px;">
             <?php include_once '../comps/navcomp.php'; ?>
         </div>
-        <div id="masterbox">
-            <div class="container">
-            <div id="boxmenu">
+        <div class="container" >
+            <center>
                 <?php
                 getindex();
                 ?>
-            </div>
-            </div>
+            </center>
         </div>
 
 
