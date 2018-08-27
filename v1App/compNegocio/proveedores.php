@@ -15,11 +15,12 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <?php include '../comps/compscss.php'; ?>
+        <link rel="stylesheet" href="css/navOptions.css" >
 
 
-      
-      
-        
+
+
+
 
 
         <title>Proveedores</title>
@@ -31,17 +32,22 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
         <?php include '../comps/navsuperior.php'; ?>
 
 
-        <div class="contenedorcentral" id="contenedorcentral">
+        <div>
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>
             </div>
-            <div class="caja2" id="caja2">
-              <div class="navbarlateral">
-                        <?php include '../comps/navlateralbar.php'; ?>
-                    </div>
-                <div  class="container">
-                    
 
+            <div class="caja2" id="caja2">
+                <div class="navbarlateral">
+                    <?php include '../comps/navlateralbar.php'; ?>
+                </div>
+                <div id="masterbox">
+
+                    <div id="boxcontrol"  class="container-fluid" >
+                        <?php include './provedoresNavOption.php'; ?>
+
+
+                    </div>
                 </div>
             </div>
         </div>
