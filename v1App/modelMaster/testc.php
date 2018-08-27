@@ -2,12 +2,7 @@
 
 include './modelInsert.php';
 
-$datos = $_POST;
+$objn = new insert($_POST,$_FILES);
 
-print_r($datos);
-
-
-//$objn = new insert();
-
-
+        
 ?>
