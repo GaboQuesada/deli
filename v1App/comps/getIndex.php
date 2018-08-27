@@ -19,8 +19,8 @@ $conn = $conexion->conect();
                     $nomse= $respuesta[$i]['sbm_no'];
                     $_SESSION[$nomse] = 1;
                     ?>
-                    <div class="boxmenu card">
-                        <div class="card-body ">
+                    <div class="boxmenu boxmenuStyle">
+                        <div class="">
                             <a class="linkm" href="<?php echo $respuesta[$i]['sbm_ur']; ?>">
                                 <div class="col-sm align-self-center">
                                     <div class="row justify-content-center">

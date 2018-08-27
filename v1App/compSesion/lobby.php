@@ -1,5 +1,5 @@
 <?php
-@session_start();
+session_start();
 include '../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
@@ -24,7 +24,7 @@ if (!empty($_SESSION["usuarioid"])) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="../lib/animation/css/animation.css" >
-        <link rel="stylesheet" href="css/lobbyx.css" >
+        <link rel="stylesheet" href="../comps/css/lobbyx.css" >
 
 
         <title>Hello, world!</title>
