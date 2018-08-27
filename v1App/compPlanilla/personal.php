@@ -39,11 +39,11 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         ?>">
 
 
-        <?php include_once './ShowInfo.php'; ?>
-        <?php include './navsuperior.php'; ?>
+        <?php include '../comps/ShowInfo.php'; ?>
+        <?php include '../comps/navsuperior.php'; ?>
 
 
-        <div class="contenedorcentral" id="contenedorcentral">
+        <div>
             <div class="caja1 " id="caja1">
 
                 <?php
@@ -63,10 +63,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
                 <div class="navbarlateral">
                     <?php include '../comps/navlateralbar.php'; ?>
                 </div
-
                 <div id="masterbox">
                     <div id="boxcontrol"  class="container-fluid" >
-
                         <div class="col-lg-12 ">
                             <!-- Cuerpo -->
 
@@ -92,7 +90,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
                                     </ul>
                                     <form class="form-inline my-2 my-lg-0">
 
-                                       <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
 
                                     </form>
                                 </div>
@@ -102,9 +100,6 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
 
                             </div>
-
-
-
 
                         </div>
                         <br>
