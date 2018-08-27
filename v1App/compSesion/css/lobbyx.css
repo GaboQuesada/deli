@@ -13,28 +13,10 @@ body {
 
 }
 
-.boxmenu{
-    -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
-    -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
-    box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
-    color: white;
-    display: inline-block; width: 13rem;
-    background-color:#000000;
-
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;
-    
-    margin-bottom: 15px;
-      margin-right: 10px;
-
-}
-
 .itebox{color: white;}
 .itebox:hover{ color: #000;}
 
-.linkm{
+.linkm{    
     text-decoration:none;
     color: white;
 }
@@ -44,20 +26,128 @@ body {
     color: #000;
 }
 
-.boxmenu:hover{
+.boxmenuStyle{
+    -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    color: white;
+
+    background-color:#000000;
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+
+}
+
+.boxmenuStyle:hover{
     -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     background-color: orange;
     color: #000;
 
-    display: inline-block; width: 13rem;
-
-
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
-    margin-right: 10px;
-margin-bottom: 15px;
+
 }
+
+@media (min-width: 1200px) {      /*  mi compu   lista*/
+    .boxmenu{
+
+        display: inline-block; width: 13rem;
+        margin-bottom: 15px;
+        margin-right: 10px;
+       padding-top: 30px;
+
+    }
+
+    .boxmenu:hover{
+
+        display: inline-block; width: 13rem;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.99px) { 
+    .boxmenu{
+
+        display: inline-block; width: 13rem;
+        margin-bottom: 15px;
+        margin-right: 10px;
+       padding-top: 30px;
+
+    }
+
+    .boxmenu:hover{
+
+        display: inline-block; width: 13rem;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.99px) { /* primera horizontal*/
+    .boxmenu{
+
+        display: inline-block; width: 13rem;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 30px;
+
+    }
+
+    .boxmenu:hover{
+
+        display: inline-block; width: 13rem;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) { 
+    .boxmenu{
+
+        display: block; width: 100%;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 15px;
+
+    }
+
+    .boxmenu:hover{
+
+        display: block; width: 100%;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 575.99px) { 
+    .boxmenu{
+
+        display: block; width: 100%;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 15px;
+
+    }
+
+    .boxmenu:hover{
+
+        display: block; width: 100%;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        padding-top: 15px;
+    }
+}
+
