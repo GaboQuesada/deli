@@ -24,14 +24,14 @@ if (!empty($_SESSION["usuarioid"])) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="../lib/animation/css/animation.css" >
-        <link rel="stylesheet" href="css/lobby.css" >
+        <link rel="stylesheet" href="css/lobbyx.css" >
 
 
         <title>Hello, world!</title>
     </head>
     <body>
 
-        <div class="container" style="padding-top:25px; padding-bottom: 25px;">
+        <div class="container slideExpandUp" style="padding-top:25px; padding-bottom: 25px;">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
                 <img src="../img/logo.png" width="30" height="30" class="" alt="">
@@ -65,7 +65,7 @@ if (!empty($_SESSION["usuarioid"])) {
         </div>
 
 
-        <div class="container" >
+        <div class="container pullDown" >
 
             <?php
             try {
