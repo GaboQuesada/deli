@@ -1,34 +1,32 @@
 $(document).ready(function () {
 
-   
-    $("#newcashbox").submit(function (e) {
-        e.preventDefault();
+});
 
+$("#hola").click(function () {
+    var datos = new FormData(document.getElementById("newcashbox"));
+    datos.append('keySes', 'on');
+    datos.append('keyid', 'on');
+    datos.append('files', 'on');
+    datos.append('uri','');
+    $.ajax({
+        url: "testc.php",
+        type: "POST",
+        data: datos,
+        dataType: "json",
+        processData: false,
+        contentType: false,
+        beforeSend: function () {
 
-        var datos = new FormData(document.getElementById("newcashbox"));
+        },
+        success: function (respuesta) {
 
+            alert(respuesta.estado);
 
-        $.ajax({
-            url: "testc.php",
-            type: "POST",
-            data: datos,
-            dataType: "json",
-            processData: false,
-            contentType: false,
-            beforeSend: function () {
+        },
+        error: function () {
 
-            },
-            success: function (respuesta) {
-
-
-            },
-            error: function () {
-
-                alert("Error del servidor ert");
-            }
-        });
-
+            alert("Error del servidor ert");
+        }
     });
-
 
 });

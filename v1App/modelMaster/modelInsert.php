@@ -43,7 +43,7 @@ if (!empty($_SESSION["usuarioid"])) {
 
         function getResponse() {
 
-            $respuesta['estado'] = "1";
+            $respuesta['estado'] = $this->getCheck()['keySes'];
             $respuesta['mensajelog'] = "Consulta Exitosa (insert)";
             $respuesta['mensaje'] = "Se ha insertado el resgistro con exito";
             header('Content-type: application/json; charset=utf-8');
