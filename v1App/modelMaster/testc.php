@@ -3,6 +3,6 @@
 include './modelInsert.php';
 
 $objn = new insert($_POST,$_FILES);
-$objn->getexpress();
+$objn->getResponse();
         
 ?>

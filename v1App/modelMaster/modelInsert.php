@@ -41,6 +41,15 @@ if (!empty($_SESSION["usuarioid"])) {
             }
         }
 
+        function getResponse() {
+
+            $respuesta['estado'] = "1";
+            $respuesta['mensajelog'] = "Consulta Exitosa (insert)";
+            $respuesta['mensaje'] = "Se ha insertado el resgistro con exito";
+            header('Content-type: application/json; charset=utf-8');
+            print json_encode($respuesta);
+        }
+
         function getCheck() {
             return $this->check;
         }
