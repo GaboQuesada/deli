@@ -7,7 +7,7 @@ $("#hola").click(function () {
     datos.append('keySes', 'on');
     datos.append('keyid', 'on');
     datos.append('files', 'on');
-    datos.append('uri','');
+    datos.append('uri','hgj');
     $.ajax({
         url: "testc.php",
         type: "POST",
