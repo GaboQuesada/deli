@@ -1,8 +1,17 @@
 
-function crtInsert (params) {
 
-    var datos = new FormData(document.getElementById("newcashbox"));
+
+function crtInsert(formobj,params, pbda, callback) {
+
+
+
+
+
+    var resultado = "";
+    
+    var datos = new FormData(formobj);
     datos.append("prm", serialize(params));
+    datos.append("pan", pbda);
     $.ajax({
         url: "../api/model/a.php",
         type: "POST",
@@ -14,8 +23,15 @@ function crtInsert (params) {
 
         },
         success: function (r) {
-          
-       $("#res").append(JSON.stringify(r) + "\n");
+
+
+            if (r == 'undefined' || r == '') {
+                resultado = "null";
+            } else {
+                resultado = r;
+            }
+            if (callback)
+                callback(resultado);
 
         },
         error: function () {
@@ -23,6 +39,8 @@ function crtInsert (params) {
         }
     });
 }
+
+
 
 
 
