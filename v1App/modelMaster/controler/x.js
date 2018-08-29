@@ -1,5 +1,15 @@
 
+function serialize(arr)
+{
+    var res = 'a:' + arr.length + ':{';
+    for (i = 0; i < arr.length; i++)
+    {
+        res += 'i:' + i + ';s:' + arr[i].length + ':"' + arr[i] + '";';
+    }
+    res += '}';
 
+    return res;
+}
 
 $(document).ready(function () {
 
@@ -9,7 +19,7 @@ $(document).ready(function () {
 
         var datos = new FormData(document.getElementById("newcashbox"));
         datos.append("vrs", "2x");
-        datos.append("pc", "mipc");
+        datos.append("pc", serialize(new Array('a', 'b', 'c', 'd')));
         $.ajax({
             url: "model/x.php",
             type: "POST",
@@ -43,6 +53,7 @@ $(document).ready(function () {
                 });
                 $("#res").append(" \n Obteniendo variable post vrs  \n");
                 $("#res").append(r.datos[3].vrs + "\n");
+
 
             },
             error: function () {
