@@ -1,22 +1,15 @@
 <?php
 
 
-$datos = array("nombre"=>"Gabo","apellidos"=>array("Quesada","Sanchez"));                      // array asociativo
-$datosf= ["fn"=> 1991, "dn"=>"Lunes" ];
-$datos2 = ["edad"=>"27","data"=>$datosf];                                                      // array asociativo
-$datos3 = array("foo", "bar", "hello", "world");                                               // array indexado
+                                             // array indexado
 $dpost = $_POST;
 $dfiles = $_FILES;
-$conts = unserialize(stripslashes($_POST['pc']));
+$params= unserialize(stripslashes($_POST['prm']));
 
 $datostotales =  array();                                                                      // incizlizando una variable como array
-$datostotales[0] = $datos;                                                                     // agregando elementos
-$datostotales[1] = $datos2;
-$datostotales[2] = $datos3;
-$datostotales[3] = $dpost;
-$datostotales[4] = $dfiles;
-$datostotales[5] = $conts;
-
+$datostotales[0] = $dpost;                                                                  // agregando elementos
+$datostotales[1] = $dfiles;
+$datostotales[2] = $params;
 
 
 $respuesta['estado'] = "1";

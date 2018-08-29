@@ -1,9 +1,8 @@
 
-function crtInsert () {
+function crtInsert (params) {
 
     var datos = new FormData(document.getElementById("newcashbox"));
-    datos.append("vrs", "2x");
-    datos.append("pc", serialize(new Array('a', 'b', 'c', 'd')));
+    datos.append("prm", serialize(params));
     $.ajax({
         url: "../api/model/a.php",
         type: "POST",
@@ -16,27 +15,7 @@ function crtInsert () {
         },
         success: function (r) {
           
-            $("#res").append("JSON devuelto \n");
-            $("#res").append(JSON.stringify(r) + "\n");
-            $("#res").append("Obteniendo el estado \n");
-            $("#res").append(r.estado + "\n");
-            $("#res").append("Obteniendo el nombre \n");
-            $("#res").append(r.datos[0].nombre + "\n");
-            $("#res").append("Obteniendo el segundo apellido \n");
-            $("#res").append(r.datos[0].apellidos[1] + "\n");
-            $("#res").append("Obteniendo la edad \n");
-            $("#res").append(r.datos[1].edad + "\n");
-            $("#res").append("Obteniendo el dia \n");
-            $("#res").append(r.datos[1].data.dn + "\n");
-            $("#res").append("Obteniendo la bar de datos de manera directa \n");
-            $("#res").append(r.datos[2][1] + "\n");
-            $("#res").append("Obteniendo la las variables  \n");
-            var datosrespuesta = r.datos[2];
-            $.each(datosrespuesta, function (i, item) {
-                $("#res").append(datosrespuesta[i] + " -  ");
-            });
-            $("#res").append(" \n Obteniendo variable post vrs  \n");
-            $("#res").append(r.datos[3].vrs + "\n");
+       $("#res").append(JSON.stringify(r) + "\n");
 
         },
         error: function () {

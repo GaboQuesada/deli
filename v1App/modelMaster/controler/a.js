@@ -2,7 +2,7 @@
 
 $("#btnEnviarC").click(function (){
     
-    alert("hoka");
-     crtInsert();
+   var order =  new Array('w', 'x', 'y', 'z');
+   crtInsert(order);
     
 })
