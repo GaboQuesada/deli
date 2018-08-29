@@ -3,7 +3,7 @@ $(document).ready(function () {});
 
 $("#btng1").click(function () {
 
-   
+
     $nb = $("#pnb").val();
     $nb2 = $("#pnb2").val();
     $ce = $("#pce").val();
@@ -11,7 +11,7 @@ $("#btng1").click(function () {
     $img = $("#pimg").val();
 
 
-    if ($nb === "" || $ce === "" ) {
+    if ($nb === "" || $ce === "") {
         alertify.alert()
                 .setting({
                     'label': 'Entendido',
@@ -20,66 +20,72 @@ $("#btng1").click(function () {
                         alertify.success('Ahora si vamos a trabajar');
                     }
                 }).show();
-    }else{
-        
-         var datos = new FormData(document.getElementById("frmstep1"));
+    } else {
 
-    $.ajax({
-        url: "model/proIfExist.php",
-        type: "POST",
-        data: datos,
-        dataType: "json",
-        processData: false,
-        contentType: false,
-        beforeSend: function () {
 
-        },
-        success: function (respuesta) {
 
-            
-            if(respuesta.resultados == 0){
-                  var datos = new FormData(document.getElementById("frmstep1"));
+        var datos = new FormData(document.getElementById("frmstep1"));
 
-    $.ajax({
-        url: "model/proInsertGeneral.php",
-        type: "POST",
-        data: datos,
-        dataType: "json",
-        processData: false,
-        contentType: false,
-        beforeSend: function () {
+        $.ajax({
+            url: "model/proIfExist.php",
+            type: "POST",
+            data: datos,
+            dataType: "json",
+            processData: false,
+            contentType: false,
+            beforeSend: function () {
 
-        },
-        success: function (respuesta) {
+            },
+            success: function (respuesta) {
 
-            alert(respuesta.estado);
+                alert(respuesta.resultados);
 
-        },
-        error: function () {
+                if (respuesta.resultados == 0) {
+                    var datos = new FormData(document.getElementById("frmstep1"));
 
-            alert("Error del servidor ert");
-        }
-    });
+                    $.ajax({
+                        url: "model/proInsertGeneral.php",
+                        type: "POST",
+                        data: datos,
+                        dataType: "json",
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function () {
 
-            }else{
-                  alertify.alert()
-                .setting({
-                    'label': 'Entendido',
-                    'message': 'Este proveedor ya se encuentra registrado  ',
-                    'onok': function () {
-                        alertify.success('Ahora si vamos a trabajar');
-                    }
-                }).show();
+                        },
+                        success: function (respuesta) {
+
+                            alert(respuesta.estado);
+
+                        },
+                        error: function () {
+
+                            alert("Error del servidor ert");
+                        }
+                    });
+
+
+
+
+                } else {
+                    alertify.alert()
+                            .setting({
+                                'label': 'Entendido',
+                                'message': 'Este proveedor ya se encuentra registrado  ',
+                                'onok': function () {
+                                    alertify.success('Ahora si vamos a trabajar');
+                                }
+                            }).show();
+                }
+
+            },
+            error: function () {
+
+                alert("Error del servidor ert");
             }
+        });
 
-        },
-        error: function () {
 
-            alert("Error del servidor ert");
-        }
-    });
-        
-        
     }
 
 });
