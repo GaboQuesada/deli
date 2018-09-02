@@ -22,7 +22,7 @@
                 
                 <div class="form-group">
 
-                    <input type="text" id="pnb" name="pap" class="form-control" placeholder="Apellido" >
+                    <input type="text" id="pap" name="pap" class="form-control" placeholder="Apellido" >
                 </div>
 
                 <button type="button" id="btnEnviarC" class="btn btn-primary btn-block">Agregar</button>

@@ -1,17 +1,12 @@
 
 
 
-function crtInsert(formobj,params, pbda, callback) {
+function crtInsert(params,callback) {
 
 
-
-
-
-    var resultado = "";
-    
-    var datos = new FormData(formobj);
-    datos.append("prm", serialize(params));
-    datos.append("pan", pbda);
+    var datos = new FormData(params["objfrm"]);
+    datos.append("prm", serialize(params["params"]));
+    datos.append("pan", params["pambd"]);
     $.ajax({
         url: "../api/model/a.php",
         type: "POST",
@@ -24,7 +19,7 @@ function crtInsert(formobj,params, pbda, callback) {
         },
         success: function (r) {
 
-
+            var resultado = null;
             if (r == 'undefined' || r == '') {
                 resultado = "null";
             } else {
