@@ -3,12 +3,12 @@
 $("#btnEnviarC").click(function () {
 
     var ddatos = {
-        go:"insert",
-        check:"off",
+        go: "insert",
+        check: "off",
         filep: "off",
-        params: new Array('pnb','pap'),
+        params: new Array('pnb', 'pap'),
         objfrm: document.getElementById("newcashbox"),
-        pambd:"pruebaInsertnb"};
+        pambd: "pruebaInsertnb"};
 
     crtInsert(
             ddatos,
